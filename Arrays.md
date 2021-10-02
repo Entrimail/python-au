@@ -8,7 +8,6 @@ https://leetcode.com/problems/string-compression/
 
 ```python
 def compress(chars: List[str]) -> Union[str, int]:
-    def compress(self, chars: List[str]) -> int:
         new_chars = []
         if len(chars) == 0:
             return "list is empty"
