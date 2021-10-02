@@ -20,8 +20,7 @@ def compress(self, chars: List[str]) -> int:
                 c += 1
                 i += 1
             if c > 1:
-                if c >= 10:
-                    
+                if c >= 10:                    
                     new_c = list(str(c))                    
                     new_chars.extend(new_c)                                 
                 
