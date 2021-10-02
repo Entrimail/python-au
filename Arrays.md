@@ -31,6 +31,10 @@ def compress(chars: List[str]) -> Union[str, int]:
                 i += 1
         chars.clear()
         chars.extend(new_chars)
-        print(new_chars)
+        n = [x for x in new_chars if x.isdigit()]
+        s = 0
+        for i in n:
+            s += int(i)
+        return s
 
 ```
