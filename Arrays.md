@@ -22,19 +22,19 @@ def compress(self, chars: List[str]) -> int:
                 if c >= 10:                    
                     new_c = list(str(c))                    
                     new_chars.extend(new_c)                                 
-                
+
                 else:
                     new_chars.append(str(c))                
                     c = 1              
-                
+
             else:
                 new_chars.append(chars[i])
                 i += 1
-       
-    
+
+
         chars.clear()
         chars.extend(new_chars)
-        
+
         return l
 
 ```
