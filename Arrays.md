@@ -3,7 +3,6 @@
 + [String Compression](#string-compression)
 
 ## String Compression
-
 https://leetcode.com/problems/string-compression/
 
 ```python
