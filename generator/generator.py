@@ -21,14 +21,11 @@ def processing_data():
 
 
 def create_link():
+    name = read_data()[0][0:-1]
     header = processing_data()[1]
     array = header.split()
     link = array[-1].split('/')[-2]
-    head = array[1:-1]
-    s = ''
-    for i in head:
-        s += i
-    link_new = f'+ [{s}]#({link})\n'
+    link_new = f'+ [{name}]#({link})\n'
 
     return link_new
 
