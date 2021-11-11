@@ -3,6 +3,7 @@ import os
 
 def read_data():
     d = open('file.txt', 'r').readlines()
+    
     return d
 
 
@@ -17,6 +18,7 @@ def processing_data():
     for e in code[1:]:
         s += e[12:]
     code_n = f'\n```python\n{s}\n```\n'
+    
     return code_n, header
 
 
