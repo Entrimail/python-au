@@ -25,7 +25,7 @@ def create_link():
     header = processing_data()[1]
     array = header.split()
     link = array[-1].split('/')[-2]
-    link_new = f'+ [{name}]#({link})\n'
+    link_new = f'+ [{name}](#{link})\n'
 
     return link_new
 
