@@ -3,7 +3,7 @@ import os
 
 def read_data():
     d = open('file.txt', 'r').readlines()
-    
+
     return d
 
 
@@ -13,12 +13,13 @@ def processing_data():
     h2 = d[1][:-1]
     header = f'\n## {h1}\n{h2}\n'
     code = d[3:]
+
     s = ''
-    s += code[0][8:]
+    s += code[0][4:]
     for e in code[1:]:
-        s += e[12:]
+        s += e[4:]
     code_n = f'\n```python\n{s}\n```\n'
-    
+
     return code_n, header
 
 
@@ -65,4 +66,3 @@ else:
     if __name__ == '__main__':
         write_data()
         add_link()
-
