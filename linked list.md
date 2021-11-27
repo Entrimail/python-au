@@ -8,34 +8,29 @@
 
 ```python
 import unittest
-import reversed_linked_list as rll
+import Middle_of_linked_list as MLL
 
-
-class TestReversedLinkedList(unittest.TestCase):
+class TestMiddleofLinkedList(unittest.TestCase):
     def setUp(self):
-        self.solution = rll.Solution()
+        self.solution = MLL.Solution()
 
-    def test_reverse(self):
-        expected = self.get_linked_list_values(self.build_linked_list([5, 4, 3, 2, 1]))
-        actual = self.get_linked_list_values(self.solution.reverseList(self.create_linked_list(5)))
-        self.assertEqual(expected, actual)  # add assertion here
+    def test_middle_of_linked_list(self):
+        expected = self.get_linked_list_values(self.build_linked_list([3, 4, 5]))
+        actual = self.get_linked_list_values(self.solution.middleNode(self.create_linked_list(5)))
+        self.assertEqual(expected, actual)
 
-    def test_reverse_empty(self):
-        expected = None
-        actual = self.solution.reverseList(None)
-        self.assertEqual(expected, actual)  # add assertion here
 
-    def create_linked_list(self, n=10):
+    def create_linked_list(self, n):
         prev_link = None
         for i in range(n, 0, -1):
-            elem = rll.ListNode(i, prev_link)
+            elem = MLL.ListNode(i, prev_link)
             prev_link = elem
         return elem
 
     def build_linked_list(self, source):
         prev_link = None
         for i in source[::-1]:
-            elem = rll.ListNode(i, prev_link)
+            elem = MLL.ListNode(i, prev_link)
             prev_link = elem
         return elem
 
@@ -56,14 +51,21 @@ if __name__ == '__main__':
 
 
 
+
+
 ```python
-def reverse_linked_list(head):
-    elem = head
-    prev_elem = None
-    while elem is not None:
-        next_elem = elem.next
-        elem.next = prev_elem
-        prev_elem = elem
-        elem = next_elem
-    return prev_elem
+def middleNode(self, head):
+    l = 0
+    new_head = head
+    if new_head.next is None:
+        return new_head
+    while new_head:
+        new_head = new_head.next
+        l += 1
+    new_head = head
+    m = l // 2
+    while m > 0:
+        new_head = new_head.next
+        m -= 1
+    return new_head
 ```
