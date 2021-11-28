@@ -1,4 +1,4 @@
-# Linked List
+# Linked - list
 
 + [Sort List](#sort-list)
 
