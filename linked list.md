@@ -1,4 +1,4 @@
-# Linked List
+# Linked- list
 
 + [Merge Two Sorted Lists](#merge-two-sorted-lists)
 
