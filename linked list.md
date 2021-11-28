@@ -1,4 +1,3 @@
-
 # Linked List
 
 + [Intersection of Two Linked Lists](intersection-of-two-linked-lists)
