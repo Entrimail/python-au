@@ -1,4 +1,4 @@
-# Linked List
+# Linked-list
 
 + [Palindrome Linked List](#palindrome-linked-list)
 
