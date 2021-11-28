@@ -1,4 +1,4 @@
-# Linked List
+# Linked-list
 
 + [Reverse Linked List](#reverse-linked-list)
 
