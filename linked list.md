@@ -1,8 +1,9 @@
 # Linked-list
 
-+ [Reverse Linked List](#reverse-linked-list)
++ [Middle of the Linked List](#middle-of-the-linked-list)
 
-## Reverse Linked List
+## Middle of the Linked List
+https://leetcode.com/problems/middle-of-the-linked-list/
 
 <details><summary>Test cases</summary><blockquote>
 
