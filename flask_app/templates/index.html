@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <link rel= "stylesheet" type= "text/css" href= "static/style.css">
+    <script>
+    function reloadPage() {
+      location.reload();
+    }
+
+    function copyPass() {
+      var copyText = document.getElementById("password").value;
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      
+      var element = document.activeElement;
+      if (element && /INPUT|TEXTAREA/i.test(element.tagName)) {
+        if ('selectionStart' in element) {
+          element.selectionEnd = element.selectionStart;
+        }
+        element.blur();
+      }
+
+      if (window.getSelection) { 
+        window.getSelection().removeAllRanges();
+      } else if (document.selection) { 
+        document.selection.empty();
+      }
+      toastAlert();
+    }
+
+    function toastAlert() {
+            $(".alert-success").show();
+            setTimeout(function() {
+                $(".alert-success").fadeOut(1500);
+            }, 1500);
+    }
+    </script>
+  </head>
+  <body>
+    <!-- MAIN CONTAINER -->
+          
+          <h1>{{ title }}</h1>
+          <p class="lead"><b>Your new password is</b></p>
+          <div class="container1"><p class="input"><input type="text" id="password" size="40" value="{{ password }}"></p></div>
+           <div class="container2"><button class="btn1" onclick="copyPass()"><i class="fa fa-copy" ></i> Copy</a>         
+            <button class="btn2" onclick="reloadPage()"><i class="fa fa-refresh"></i> New Password</a></div>
+          
+            
+          
+          
+          
+        </div>
+        <div class="col-md-1">
+        </div>
+
+
+        </div>
+      </div>
+     
+
+  
+  </body>
+</html>
